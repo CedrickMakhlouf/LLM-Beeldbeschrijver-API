@@ -3,6 +3,7 @@
 > **Een productieklare Azure API voor hoogwaardige, Nederlandstalige schermbeschrijvingen op basis van screenshots.**
 
 ![CI](https://github.com/CedrickMakhlouf/LLM-Beeldbeschrijver-API/actions/workflows/ci.yml/badge.svg)
+![CD](https://github.com/CedrickMakhlouf/LLM-Beeldbeschrijver-API/actions/workflows/cd.yml/badge.svg)
 ![Python](https://img.shields.io/badge/python-3.12-blue)
 ![Azure](https://img.shields.io/badge/cloud-Azure-0078D4)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -37,7 +38,8 @@ Nederlandstalige schermbeschrijving (API-response)
 | API              | FastAPI                              |
 | Model-inferentie | Azure OpenAI / Azure AI Foundry      |
 | Infrastructuur   | Azure Container Apps (Bicep IaC)     |
-| Containerisatie  | Docker (multi-stage build)           |
+| Containerisatie  | Docker (multi-stage build), GHCR     |
+| CI/CD            | GitHub Actions                       |
 | Code quality     | Ruff, Pytest                         |
 
 ---
@@ -133,11 +135,20 @@ az deployment group create \
 
 ## Docker
 
+Het image wordt automatisch gebuild en gepusht naar GitHub Container Registry bij elke push naar `main`.
+
 ```bash
-# Build
-docker build -t beeldbeschrijver-api .
+# Pull het laatste image
+docker pull ghcr.io/cedrickmakhlouf/llm-beeldbeschrijver-api:latest
 
 # Run
+docker run -p 8000:8000 --env-file .env ghcr.io/cedrickmakhlouf/llm-beeldbeschrijver-api:latest
+```
+
+Lokaal builden:
+
+```bash
+docker build -t beeldbeschrijver-api .
 docker run -p 8000:8000 --env-file .env beeldbeschrijver-api
 ```
 
