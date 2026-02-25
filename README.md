@@ -16,14 +16,14 @@ Voor blinden en slechtzienden zijn digitale schermen vaak slecht toegankelijk. S
 
 ## De Oplossing
 
-Deze API biedt een schaalbare, productieklare oplossing op Azure. Gebaseerd op de inzichten van de SEE-Benchmark, gebruikt de API geavanceerde Vision-Language Models (zoals GPT-4o of Llama via Azure) om screenshots automatisch om te zetten naar toegankelijke, Nederlandstalige beeldbeschrijvingen.
+Deze API biedt een schaalbare, productieklare oplossing op Azure. Op basis van de SEE-Benchmark zet de API met behulp van LLama4-Maverick en een geoptimaliseerde prompt screenshots automatisch om in hoogwaardige en toegankelijke, Nederlandstalige beeldbeschrijvingen.
 
 **Workflow:**
 ```
 Screenshot (base64 of URL)
       │
       ▼
-Azure Vision-Language Model (GPT-4o, Llama)
+Azure Vision-Language Model (LLama4-Maverick)
       │
       ▼
 Nederlandstalige schermbeschrijving (API-response)
@@ -175,15 +175,6 @@ pytest tests/ -v -m integration
 | Bicep IaC                | Reproduceerbaar, versiebeheerd, eenvoudig te deployen       |
 | Docker multi-stage build | Kleine image, non-root gebruiker, productieveilig           |
 | SEE-Benchmark            | Kwaliteitsstandaard voor de schermbeschrijvingsprompt       |
-
----
-
-## Roadmap
-
-- [ ] Ondersteuning voor meerdere talen
-- [ ] Streaming responses via Server-Sent Events
-- [ ] Automatische re-evaluatie via SEE-Benchmark koppeling
-- [ ] Authenticatie (API-key middleware)
 
 ---
 
