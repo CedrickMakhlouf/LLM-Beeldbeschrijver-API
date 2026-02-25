@@ -1,6 +1,9 @@
 # LLM-Beeldbeschrijver-API
 
-> **Een productieklare Azure API voor hoogwaardige, Nederlandstalige schermbeschrijvingen op basis van screenshots.**
+> A production-ready Azure API for high-quality Dutch screen descriptions based on screenshots.
+
+**Note:** This project was built for the Dutch Ministry of the Interior and Kingdom Relations (MinBZK). Documentation is in Dutch as it focuses specifically on Dutch screen descriptions.
+
 
 ![CI](https://github.com/CedrickMakhlouf/LLM-Beeldbeschrijver-API/actions/workflows/ci.yml/badge.svg)
 ![CD](https://github.com/CedrickMakhlouf/LLM-Beeldbeschrijver-API/actions/workflows/cd.yml/badge.svg)
