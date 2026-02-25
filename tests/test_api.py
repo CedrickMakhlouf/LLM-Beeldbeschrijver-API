@@ -74,7 +74,7 @@ def test_describe_live_vscode_screenshot():
     img_bytes = httpx.get(VSCODE_SCREENSHOT_URL).content
     b64 = base64.b64encode(img_bytes).decode()
     response = httpx.post(
-        "https://see-benchmark.ambitiousmoss-cd4cf8a8.eastus.azurecontainerapps.io/api/describe",
+        "https://llm-beeldbeschrijver.ambitiousmoss-cd4cf8a8.eastus.azurecontainerapps.io/api/describe",
         json={"image_base64": b64, "image_id": "vscode-001"},
         timeout=30,
     )

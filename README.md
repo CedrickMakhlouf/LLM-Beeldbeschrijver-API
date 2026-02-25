@@ -10,6 +10,16 @@
 
 ---
 
+### 🚀 [Probeer de live API op Azure →](https://llm-beeldbeschrijver.ambitiousmoss-cd4cf8a8.eastus.azurecontainerapps.io/docs)
+
+```bash
+curl -X POST https://llm-beeldbeschrijver.ambitiousmoss-cd4cf8a8.eastus.azurecontainerapps.io/api/describe \
+  -H "Content-Type: application/json" \
+  -d '{"image_url": "https://example.com/screenshot.png"}'
+```
+
+---
+
 ## Het Probleem
 
 Voor blinden en slechtzienden zijn digitale schermen vaak slecht toegankelijk. Schermlezers bieden lineaire toegang, maar missen het overzicht en de context die ziende gebruikers wél ervaren. Handmatige beschrijvingen zijn arbeidsintensief en vaak niet up-to-date. Er is behoefte aan een automatische, kwalitatieve oplossing voor Nederlandstalige schermbeschrijvingen.

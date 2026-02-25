@@ -1,5 +1,5 @@
 param location string = resourceGroup().location
-param appName string = 'see-benchmark'
+param appName string = 'llm-beeldbeschrijver'
 param containerImage string
 param containerPort int = 8000
 param cpu string = '0.5'
