@@ -13,7 +13,7 @@
 
 ---
 
-### 🚀 [Probeer de live API op Azure →](https://llm-beeldbeschrijver.ambitiousmoss-cd4cf8a8.eastus.azurecontainerapps.io/docs)
+### **[Live Demo](https://llm-beeldbeschrijver.ambitiousmoss-cd4cf8a8.eastus.azurecontainerapps.io/docs)** — Try the API with Swagger UI
 
 ```bash
 curl -X POST https://llm-beeldbeschrijver.ambitiousmoss-cd4cf8a8.eastus.azurecontainerapps.io/api/describe \
